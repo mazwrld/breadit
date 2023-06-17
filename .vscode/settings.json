@@ -2,12 +2,19 @@
   "typescript.tsdk": "node_modules\\typescript\\lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "cSpell.words": [
+    "autosize",
     "Breadit",
     "clsx",
+    "cmdk",
     "editorjs",
+    "hookform",
     "ianvs",
     "Lucide",
-    "tailwindcss"
+    "mantine",
+    "tailwindcss",
+    "tanstack",
+    "uploadthing",
+    "upstash"
   ],
   "files.exclude": {
     "**/.git": true,
