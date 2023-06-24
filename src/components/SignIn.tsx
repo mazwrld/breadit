@@ -1,6 +1,7 @@
+import Link from 'next/link'
 import { Icons } from './Icons'
 
-export function SignIn() {
+export default function SignIn() {
   return (
     <div className="container mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[400px]">
       <div className="flex flex-col space-y-2 text-center">
@@ -9,6 +10,12 @@ export function SignIn() {
         <p className="mx-auto max-w-xs text-sm">
           By continuing, you agree to setting up a Breadit account and Agreeing
           to our User Agreement and Privacy Policy.
+        </p>
+        <p className="px-8 text-center text-sm text-zinc-700">
+          New to Breadit?{' '}
+          <Link href="/sign-up" className="text-sm hover:text-black">
+            Sign Up
+          </Link>
         </p>
       </div>
     </div>

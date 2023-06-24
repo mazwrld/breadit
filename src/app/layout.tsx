@@ -1,5 +1,5 @@
+import Navbar from '@/components/Navbar'
 import { cn } from '@/lib/utils'
-import { Navbar } from '@/components/Navbar'
 
 import '@/styles/globals.css'
 
