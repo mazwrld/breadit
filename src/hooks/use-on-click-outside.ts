@@ -1,19 +1,17 @@
 import { RefObject, useEffect } from 'react'
 
-type Event = MouseEvent | TouchEvent
-
-export const useOnClickOutside = <T extends HTMLElement = HTMLElement>(
+const useOnClickOutside = <T extends HTMLElement = HTMLElement>(
   ref: RefObject<T>,
-  handler: (event: Event) => void
+  handler: () => void
 ) => {
   useEffect(() => {
-    const listener = (event: Event) => {
+    const listener = (event: MouseEvent | TouchEvent) => {
       const el = ref?.current
       if (!el || el.contains((event?.target as Node) || null)) {
         return
       }
 
-      handler(event) // Call the handler only if the click is outside of the element passed.
+      handler() // Call the handler only if the click is outside of the element passed.
     }
 
     document.addEventListener('mousedown', listener)
@@ -25,3 +23,5 @@ export const useOnClickOutside = <T extends HTMLElement = HTMLElement>(
     }
   }, [ref, handler]) // Reload only if ref or handler changes
 }
+
+export default useOnClickOutside
