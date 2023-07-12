@@ -1,5 +1,6 @@
+import Icons from '@/components/Icons'
+import UserAuthForm from '@/components/UserAuthForm'
 import Link from 'next/link'
-import Icons from './Icons'
 
 export default function SignIn() {
   return (
@@ -11,6 +12,7 @@ export default function SignIn() {
           By continuing, you agree to setting up a Breadit account and Agreeing
           to our User Agreement and Privacy Policy.
         </p>
+        <UserAuthForm />
         <p className="px-8 text-center text-sm text-zinc-700">
           New to Breadit?{' '}
           <Link href="/sign-up" className="text-sm hover:text-black">

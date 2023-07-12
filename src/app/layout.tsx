@@ -1,4 +1,5 @@
 import Navbar from '@/components/Navbar'
+import Toaster from '@/components/ui/Toaster'
 import { cn } from '@/lib/utils'
 
 import '@/styles/globals.css'
@@ -30,6 +31,7 @@ export default function RootLayout({
         <main className="container mx-auto h-full max-w-7xl pt-12">
           {children}
         </main>
+        <Toaster />
       </body>
     </html>
   )

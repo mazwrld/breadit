@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
-import Icons from './Icons'
-import { buttonVariants } from './ui/Button'
+import Icons from '@/components/Icons'
+import { buttonVariants } from '@/components/ui/Button'
 
 export default function Navbar() {
   return (
