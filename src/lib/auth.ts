@@ -1,7 +1,7 @@
 import db from '@/lib/db'
 import { PrismaAdapter } from '@next-auth/prisma-adapter'
 import { nanoid } from 'nanoid'
-import { NextAuthOptions } from 'next-auth'
+import { NextAuthOptions, getServerSession } from 'next-auth'
 import GoogleProvider from 'next-auth/providers/google'
 
 // eslint-disable-next-line import/prefer-default-export
@@ -53,7 +53,10 @@ export const authOptions: NextAuthOptions = {
       }
     },
     redirect() {
+      // return 'http://localhost:3000' for some reason this worked and the / didn't work but then / stated working again
       return '/'
     },
   },
 }
+
+export const getAuthSession = () => getServerSession(authOptions)
